@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+
+		body{
+			background-size:cover;
+		}
+
+		
+		#present{
+			width:400px;
+			height:400px;
+			background-size:contain;
+			background-repeat: no repeat;
+			background-image:url(present.png);
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+			opacity: 1;
+			
+
+		}
+
+		#text{
+			width:100%;
+			height:100px; 
+			background-color: yellow;
+			position:relative;
+			top:100%;
+			text-aligen:center;
+			opacity: 1;
+
+		}
+
+		@keyframes shake {
+			0%{
+
+				transform: rotate(20deg);
+			}
+
+			50%{
+
+				transform: rotate(-20deg);
+			}
+
+			100%{
+
+				transform: rotate(20deg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<center>
+
+		<div id="present">
+
+
+		<div id=text></div>
+
+	</div>
+		
+	</center>
+
+<script type="text/javascript">
+	
+	present.addEventListener("click", function(){
+
+
+		document.body.style.backgroundImage = "url()";
+
+		present.style.animationName = "shake";
+		text.innerText = "1"
+
+
+	})
+</script>
+
+</body>
+</html>

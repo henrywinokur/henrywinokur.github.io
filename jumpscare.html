@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <style type="text/css">
+	 	
+	 	body{
+	 		margin:0px;
+	 		background-color:black;
+	 	}
+
+	 	#box{
+	 		background-repeat: no-repeat;
+		width:100%;
+		background-position:center;
+		height:800px;
+		background-image:url(scaryDoor.webp);
+		background-size: contain;
+	}
+
+	/*	#scare{
+			width:800px;
+			height:800px;
+		background-image:url(https://media3.giphy.com/media/5oWpOD8Thsmo8/200w.gif?cid=6c09b952k0g0y6vhdpagc8vgfabt4uwyuubehxdw7g4rfkzk&ep=v1_gifs_search&rid=200w.gif&ct=g);
+		background-size:cover;
+		opacity:1;
+		background-color:purple;
+		transform: rotate(0deg);
+		transitions:6s;
+		background-position:center;
+		border-radius:50%;
+		display:inline-block;
+	}*/
+	
+
+
+
+	 </style>
+
+
+</head>
+<body>
+	<div id="box"></div>
+
+	<audio id=sound src="scream.mp3"></audio>
+	
+
+	<script type="text/javascript">
+var clickcounter =0
+
+		document.addEventListener("click", function(){
+			clickcounter = clickcounter+1
+			console.log(clickcounter)
+
+			box.style.backgroundImage = "url(evilClown.jpeg)";
+			sound.play()
+
+			if (clickcounter == 1){
+				console.log("hi!")
+
+			}
+
+			if (clickcounter == 2){
+				console.log("bye!")
+
+			}
+
+			if (clickcounter == 3){
+				console.log("hi!")
+
+			}
+		// box.style.tranform = "rotate(60deg)";
+		}
+			)
+
+		</script>
+
+
+
+
+</body>
+</html>

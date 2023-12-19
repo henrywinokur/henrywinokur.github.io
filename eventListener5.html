@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#bob{
+			width:300px;
+			height:300px;
+			
+
+		}
+
+		#henry{
+			width:600px;
+			height:600px;
+		}
+
+		#jack{
+			width:1000px;
+			height:1000px;
+		}
+
+	</style>
+</head>
+<body>
+
+
+<div id="bob">
+
+</div>
+
+<div id="henry">
+
+</div>
+
+<div id="jack">
+
+</div>
+
+<script type="text/javascript">
+
+	document.addEventListener("mousemove", function(event){
+		document.body.style.backgroundColor =
+		"rgb(" + event.clientX/2 + "," + 0 + ","+ event.clientY/2+ ")";
+		bob.style.transform = "rotate(" + event.clientX + "deg)";
+		bob.style.background = "rgb(" + event.clientY/2 +","+ 0 + ","+ event.clientX/2+ ")";
+	})
+	document.addEventListener("mousemove", function(event){
+		document.body.style.backgroundColor =
+		"rgb(" + event.clientX/2 + "," + 0 + ","+ event.clientY/2+ ")";
+		henry.style.transform = "rotate(" + event.clientX + "deg)";
+		henry.style.background = "rgb(" + event.clientY/2 +","+ 0 + ","+ event.clientX/2+ ")";
+	})
+	document.addEventListener("mousemove", function(event){
+		document.body.style.backgroundColor =
+		"rgb(" + event.clientX/2 + "," + 0 + ","+ event.clientY/2+ ")";
+		jack.style.transform = "rotate(" + event.clientX + "deg)";
+		jack.style.background = "rgb(" + event.clientY/2 +","+ 0 + ","+ event.clientX/2+ ")";
+	})
+
+
+</script>
+
+</body>
+</html>

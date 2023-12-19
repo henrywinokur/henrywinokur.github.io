@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		#face{
+			width:700px;
+			height:700px;
+			background-image:url(face.png);
+			background-size:contain;
+			background-position:center;
+			background-repeat: no-repeat;
+		}
+
+	.feature{
+		width:100px;
+		height:100px;
+		border:1px solid black;
+		display:inLine-block;
+		margin:5px;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+
+	}
+
+
+	#one{
+		background-image: url(eye.png);
+	}
+
+	#two{
+		background-image: url(nose.png);
+	}
+
+	#three{
+		background-image: url(mouth.png);
+	}
+
+	#four{
+		background-image: url(eyebrow.png);
+	}
+
+	#five{
+		background-image: url();
+	}
+	</style>
+</head>
+<body>
+	<div id="face"></div>
+	<div id="one"class="feature"></div>
+	<div id="two"class="feature"></div>
+	<div id="three"class="feature"></div>
+	<div id="four"class="feature"></div>
+	<script type="text/javascript">
+
+		var image;
+
+		one.addEventListener("click", function(){
+			image = "eye.png"
+			console.log(image)
+		})
+
+		two.addEventListener("click", function(){
+			image = "nose.png"
+			console.log(image)
+		}
+		)
+		three.addEventListener("click", function(){
+			image = "mouth.png"
+			console.log(image)
+		})
+
+		four.addEventListener("click", function(){
+			image = "eyebrow.png"
+			console.log(image)
+		})
+
+
+		
+		
+
+		face.addEventListener("click", function makeDiv(event){
+
+
+
+			var box = document.createElement('div')
+			document.body.appendChild(box)
+			box.style.width="100px";
+			box.style.height="100px";
+			// box.style.backgroundColor = "blue"
+			box.style.backgroundSize="contain";
+			box.style.backgroundRepeat="no-repeat";
+			console.log(event)
+			box.style.position="absolute"
+			box.style.left = event.clientX-40 +'px'
+			box.style.top = event.clientY-40 +'px'
+			box.style.backgroundImage = "url("+image+")"
+
+		})
+	</script>
+
+
+</body>
+</html>

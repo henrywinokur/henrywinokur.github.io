@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#potato{
+			background-image:url(potato.png);
+		}
+
+		#tomato{
+			background-image:url(tomato.png);
+		}
+
+		.toppings{
+			width:100px;
+			height:100px;
+			background-size:contain;
+			background-repeat: no-repeat;
+		}
+
+
+		#plate{
+			width:500px;
+			height:500px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQb_4E8bthFZlwuWfgMuowi1tUgwWYud9NW8a7aMf2g&s);
+		}
+	</style>
+</head>
+<body>
+
+	<div id="potato" class="toppings"></div>
+	<div id="tomato" class="toppings"></div>
+
+<div id="plate"></div>
+	<script type="text/javascript">
+
+		var image;
+
+		potato.addEventListener("click", function(){
+			image = "potato.png"
+			console.log(image)
+		})
+
+		tomato.addEventListener("click", function(){
+			image = "tomato.png"
+			console.log(image)
+		}
+			)
+		
+		
+
+		plate.addEventListener("click", function makeDiv(event){
+			var box = document.createElement('div')
+			document.body.appendChild(box)
+			box.style.width="100px"
+			box.style.height="100px"
+			// box.style.backgroundColor = "blue"
+			box.style.backgroundSize="contain"
+			console.log(event)
+			box.style.position="absolute"
+			box.style.left = event.clientX +'px'
+			box.style.top = event.clientY +'px'
+			box.style.backgroundImage = "url("+image+")"
+
+		})
+	</script>
+
+</body>
+</html>
