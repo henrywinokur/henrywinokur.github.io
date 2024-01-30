@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mega Box Opening</title>
+</head>
+<body>
+    body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mega-box {
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.box-content {
+    margin-top: 20px;
+    font-size: 24px;
+}
+    <div class="mega-box">
+        <button onclick="openMegaBox()">Open Mega Box</button>
+        <div id="box-content" class="box-content"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mega-box {
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.box-content {
+    margin-top: 20px;
+    font-size: 24px;
+}
+function openMegaBox() {
+    // Simulate the Mega Box opening
+    const items = ["Item A", "Item B", "Item C", "Item D", "Item E"];
+    const randomItem = items[Math.floor(Math.random() * items.length)];
+
+    // Display the opened box content
+    const boxContent = document.getElementById("box-content");
+    boxContent.innerText = `You got: ${randomItem}`;
+}

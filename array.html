@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+		.box{
+			width:200px;
+			height:200px;
+			border:1px solid black;
+			display:inline-block;
+			background-size:contain;
+			background-repeat: no-repeat;
+		}
+
+		#handle{
+			width:300px;
+			height:300px;
+			background-image: url(handle.png);
+			background-size: contain;
+			display: inline-block;
+			background-repeat: no-repeat;
+			transition:0.5s;
+		}
+
+	</style>
+	<center>
+
+	<h1>Who is greatest player ever?</h1>
+	<br>
+	<div id="handle"></div>
+	<div id="one" class="box"></div>
+	<div id="two" class="box"></div>
+	<div id="three" class="box"></div>
+
+</center>
+
+</head>
+<body>
+	
+	<script type="text/javascript">
+//below is an array of images//
+		var people =["url(messi.png)", "url(kane.png)", "url(mbappe.png)", "url(ronaldo.png)", "url(kante.png)", "url(pulisic.jpg)", "url(pele.png)"]
+
+
+
+
+//add an event listener to the div with the id of handle 
+
+	handle.addEventListener("click", function(){
+
+			//these are three random number genetarting randomly 1-7//
+			var randomNumber1 = Math.round(Math.random()*7);
+			var randomNumber2 = Math.round(Math.random()*7);
+			var randomNumber3 = Math.round(Math.random()*7);
+
+			//we are getting the three divs with the id's of one, two and three, and setting their background Image to be one of the randomly selected images from the array people on line 42//
+
+			one.style.backgroundImage = people[randomNumber1]
+			two.style.backgroundImage = people[randomNumber2]
+			three.style.backgroundImage = people[randomNumber3]
+		
+		
+		}
+		
+)
+
+function removeImage (){
+		handle.style.backgroundImage = "url(handle.png)"
+	}
+
+	handle.addEventListener("click", function imageChange(event){
+		handle.style.backgroundImage = "url(handle2.png)"
+
+		setTimeout(removeImage, 1000)
+	})
+
+
+
+	
+
+	
+	
+
+	</script>
+
+	
+</body>
+</html>
