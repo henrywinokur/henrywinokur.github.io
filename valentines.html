@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		#floor{
+			width:1500px;
+			height:1500px;
+			background-image: url(floor.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: fixed;
+		}
+
+		#boy{
+			width:500px;
+			height:500px;
+			background-image: url(boy.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+
+		#girl{
+			width:250px;
+			height:250px;
+			background-image: url(girl2.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			left:1000px;
+			top:52%;
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div id="floor"><div id="boy"></div></div>
+<div id=girl></div>
+
+	<script type="text/javascript">
+		var x =0
+		var y =0
+
+
+		document.addEventListener("keydown",
+			function(event){
+				
+
+				if (event.key=="ArrowRight" ){
+					x=x+20
+					boy.style.left = x+'px'
+					console.log(x)
+				}
+				if (event.key=="ArrowUp" ){
+					y=y-20
+					boy.style.top = y+'px'
+					console.log(y)
+				}
+
+				if (event.key=="ArrowLeft" ){
+					x=x-20
+					boy.style.left = x+'px'
+					console.log(x)
+				}
+
+				if (event.key=="ArrowDown" ){
+					y=y+20
+					boy.style.top = y+'px'
+					console.log(y)
+				}
+
+				if (x>700 && y>58) {
+					alert("Happy Valentine's Day")
+				}
+
+		
+			})
+
+		</script>
+
+
+</body>
+</html>

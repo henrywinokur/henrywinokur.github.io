@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+		#car{
+			width:50px;
+			height:50px;
+			background-image:url(car4.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+
+		}
+
+		#road{
+			width:1200px;
+			height:1200px;
+			background-image: url(road2.png);
+			position-size: contain;
+			background-repeat: no-repeat;
+			position: fixed;
+		
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div id="road"><div id="car"></div></div>
+
+	<script type="text/javascript">
+		var x =0
+		var y =0
+
+
+		document.addEventListener("keydown",
+			function(event){
+				
+
+				if (event.key=="ArrowRight" ){
+					x=x+10
+					car.style.left = x+'px'
+			}
+				if (event.key=="ArrowUp" ){
+					y=y-10
+					car.style.top = y+'px'
+				}
+
+				if (event.key=="ArrowLeft" ){
+					x=x-10
+					car.style.left = x+'px'
+				}
+
+				if (event.key=="ArrowDown" ){
+					y=y+10
+					car.style.top = y+'px'
+				}
+
+		
+			})
+
+		</script>
+
+</body>
+</html>
+
