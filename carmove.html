@@ -8,7 +8,7 @@
 		#car{
 			width:50px;
 			height:50px;
-			background-image:url(car4.png);
+			background-image:url(leftcar.png);
 			background-size: contain;
 			background-repeat: no-repeat;
 			position: absolute;
@@ -44,20 +44,24 @@
 				if (event.key=="ArrowRight" ){
 					x=x+10
 					car.style.left = x+'px'
+					car.style.backgroundImage="url(rightcar.png)"
 			}
 				if (event.key=="ArrowUp" ){
 					y=y-10
 					car.style.top = y+'px'
+					car.style.backgroundImage="url(upcar.png)"
 				}
 
 				if (event.key=="ArrowLeft" ){
 					x=x-10
 					car.style.left = x+'px'
+					car.style.backgroundImage="url(leftcar.png)"
 				}
 
 				if (event.key=="ArrowDown" ){
 					y=y+10
 					car.style.top = y+'px'
+					car.style.backgroundImage="url(downcar.png)"
 				}
 
 		
