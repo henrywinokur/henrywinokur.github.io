@@ -43,7 +43,8 @@
 	}
 
 	#five{
-		background-image: url();
+		background-image: url(hair.png);
+	
 	}
 	</style>
 </head>
@@ -53,6 +54,7 @@
 	<div id="two"class="feature"></div>
 	<div id="three"class="feature"></div>
 	<div id="four"class="feature"></div>
+	<div id="five"class="feature"></div>
 	<script type="text/javascript">
 
 		var image;
@@ -77,14 +79,16 @@
 			console.log(image)
 		})
 
+		five.addEventListener("click", function(){
+			image = "hair.png"
+			console.log(image)
+		})
+
 
 		
 		
 
 		face.addEventListener("click", function makeDiv(event){
-
-
-
 			var box = document.createElement('div')
 			document.body.appendChild(box)
 			box.style.width="100px";
@@ -97,6 +101,15 @@
 			box.style.left = event.clientX-40 +'px'
 			box.style.top = event.clientY-40 +'px'
 			box.style.backgroundImage = "url("+image+")"
+
+			if ( image == "hair.png"){
+				box.style.width="1000px";
+			box.style.height="1000px";
+				box.style.left = event.clientX-400 +'px'
+			box.style.top = event.clientY-90 +'px'
+
+
+			}
 
 		})
 	</script>

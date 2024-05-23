@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		#ball{
+			width:40px;
+			height:40px;
+			background-image:url(ball3.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left:675px;
+			top:35%;
+
+			animation-name: fastball;
+			animation-iteration-count: 1;
+			animation-duration:0.8s;
+			transition:.5s;	
+		}
+
+
+		#field{
+			width:1450px;
+			background-position: center;
+			height:1150px;
+			background-image: url(field.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left:1px;
+			top:-20%;
+
+
+
+		}
+
+
+
+
+		#bat{
+			width:400px;
+			background-position:center;
+			height:400px;
+			background-image:url(bat3.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left:330px;
+			top:30%;
+/*			background-color:red;*/
+
+		
+
+
+
+			/*animation-name: batter;
+			animation-iteration-count: 1;
+			animation-duration: 0.8s;
+			transition: .5s;*/
+		}
+
+		/*#bat2{
+			width:300px;
+			height:500px;
+			background-image: url(bat4.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+
+		}*/
+
+
+
+		@keyframes fastball{
+
+			0%{
+			width:40px;
+			height:40px;
+			left:675px;
+
+			}
+
+			100%{
+			width:250px;
+			height:250px;
+			transform:rotate(720deg);
+			/*border-radius:50%;
+			border:20px solid black;*/
+			left:500px;
+			}
+
+			/*100%{
+			width:10px;
+			height:10px;
+			left:675px;
+			top:45%;
+
+			}*/
+
+		}
+
+		@keyframes batter{
+
+			0%{
+			width:100px;
+			height:100px;
+			left:675px;
+
+			}
+
+			100%{
+			width:300px;
+			height:300px;
+			transform:rotate(1deg);
+			/*border-radius:50%;
+			border:20px solid black;*/
+			left:500px;
+			}
+
+			/*100%{
+			width:10px;
+			height:10px;
+			left:675px;
+			top:45%;
+
+			}*/
+
+		}
+
+
+	</style>
+	
+	<title></title>
+</head>
+<body>
+
+	<div id="field"><div id="ball"></div></div>
+	<div id="bat"></div>
+	<!-- 1. make a ball that moves towards us and grows in size
+	2. make it so when we click the ball moves away and shrinks -->
+	
+	<!-- <div id="bat2"></div> -->
+
+<script type="text/javascript">
+
+	var rorate = 0;
+
+	var hits = ["homerun!", "triple!", "single!", "double!", "out of the ball park!"]
+
+
+	document.addEventListener("mousemove", function(event){
+		console.log(event.clientX, event.clientY)
+		bat.style.left = event.clientX-200 +"px"
+		bat.style.top = event.clientY-200 +"px"
+	})
+
+	var random = Math.floor(Math.random()*hits.length)
+
+	function hittheball (){
+		alert(hits[random])
+
+	}
+
+	 document.addEventListener("click", function(event){
+		console.log("hit!")
+		bat.style.backgroundImage = "url(bat5.png)"
+		bat.style.left = event.clientX-200 +"px"
+		bat.style.top = event.clientY-200 +"px"
+		/*rotate = Math.random()*360;
+		bat.style.transition = ".2s"
+		bat.style.transform="rotate("+rotate+"deg)"*/
+		ball.style.left = Math.random()*800 + "px"
+		ball.style.top = Math.random()*100 + "px"
+		setTimeout(hittheball, 1000)
+
+
+
+	})
+
+
+	// ball.addEventListener("click", function(){
+	// 	console.log("what?!")
+	// 	/* var x = Math.random()*255
+	// 	var y = Math.random()*255
+	// 	var z = Math.random()*255*/
+	// 	// ball.style.animationName = ""
+	// 	ball.style.left = Math.random()*800 + "px"
+	// 	ball.style.top = Math.random()*100 + "px";
+
+
+	// })
+
+
+	</script>
+
+</body>
+</html>
